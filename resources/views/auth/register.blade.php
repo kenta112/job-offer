@@ -62,14 +62,14 @@
                         </div>
 
                         <div class="form-group row">
-                            <p class="col-md-4 text-md-right"><b>選択してください</b></p>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('選択してください') }}</label>
                             <div class="col-md-2">
-                                <input type="radio" value="1" name="student" id="student">
+                                <input type="radio" value="1" name="button" id="student">
                                 <label for="student">生徒</label>
                             </div>
                             <div class="col-md-2">
-                                <input type="radio" value="2" name="company" id="company">
-                                <label for="">企業</label>
+                                <input type="radio" value="2" name="button" id="company">
+                                <label for="company">企業</label>
                             </div>
                         </div>
 
