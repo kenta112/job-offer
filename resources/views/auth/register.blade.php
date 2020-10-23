@@ -61,6 +61,18 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <p class="col-md-4 text-md-right"><b>選択してください</b></p>
+                            <div class="col-md-2">
+                                <input type="radio" value="1" name="student" id="student">
+                                <label for="student">生徒</label>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="radio" value="2" name="company" id="company">
+                                <label for="">企業</label>
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
