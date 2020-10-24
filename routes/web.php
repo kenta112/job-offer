@@ -24,3 +24,5 @@ Auth::routes();
 Route::get('/', 'ProfileController@index')->name('profile.index');
 
 Route::get('/mypage', 'MypageController@index')->name('mypage.index');
+
+Route::get('/mypage/create', 'MypageController@create')->name('mypage.create');

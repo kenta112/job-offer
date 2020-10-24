@@ -18,5 +18,10 @@ $user = Auth::user();
         
     }
 
+    public function create() {
+
+return view('mypage.create');
+
+    }
 
 }
