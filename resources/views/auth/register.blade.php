@@ -64,11 +64,11 @@
                         <div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right">{{ __('選択してください') }}</label>
                             <div class="col-md-2">
-                                <input type="radio" value="1" name="type" id="student">
+                                <input type="radio" value="0" name="type" id="student">
                                 <label for="student">生徒</label>
                             </div>
                             <div class="col-md-2">
-                                <input type="radio" value="2" name="type" id="company">
+                                <input type="radio" value="1" name="type" id="company">
                                 <label for="company">企業</label>
                             </div>
                         </div>
