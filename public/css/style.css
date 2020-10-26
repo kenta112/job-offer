@@ -59,8 +59,13 @@ body{
     background-color:#cccccc;
     text-align: center;
     margin: 10px 0 10px 0;
+    width:700px;
 }
 
+.container {
+   width:300px;
+   margin:0 auto;
+}
 .card{
    width: 288px;
    height: auto;
