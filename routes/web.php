@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/', 'ProfileController@index')->name('profile.index');
+Route::get('/{profile}', 'ProfileController@show')->name('profile.show');
 
 Route::get('/mypage', 'MypageController@index')->name('mypage.index');
 
