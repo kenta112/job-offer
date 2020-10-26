@@ -34,9 +34,21 @@
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <div class="card__imgframe" src="">写真入る</div>
+                <div class="card__textbox">
+                    <div class="card__titletext">
+                        ホゲホゲホゲほげ
+                    </div>
+                    <div class="card__overviewtext">
+                        ホゲホゲホゲ
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer class="footer">
+            <p>Saitech</p>
         </footer>
         </body>
 <html>

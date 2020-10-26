@@ -103,5 +103,6 @@ body{
 .footer{
     height: 70px;
     text-align: center;
+    vertical-align: middle;
     background: linear-gradient(146deg, #ffbd00, #ef7122);
 }
