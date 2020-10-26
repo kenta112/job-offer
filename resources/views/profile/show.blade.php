@@ -14,3 +14,5 @@
 
 <p>アピールポイント：{{ $profile->appeal }}</p>
 <p>将来像：{{ $profile->future }}</p>
+
+
