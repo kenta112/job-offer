@@ -24,6 +24,8 @@ Auth::routes();
 Route::get('/', 'ProfileController@index')->name('profile.index');
 Route::get('/{profile}', 'ProfileController@show')->name('profile.show');
 
+Route::get('/match/{match}', 'MatchController@store')->name('match.store');
+
 Route::get('/mypage', 'MypageController@index')->name('mypage.index');
 
 Route::get('/mypage/create', 'MypageController@create')->name('mypage.create');
