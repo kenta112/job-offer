@@ -1,25 +1,31 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>job offer</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-</head>
-<body>
-    <header>
-        <h1>Sai Tech</h1>
-        <a href="{{route('mypage.index')}}">マイページ</a>
-    </header>
-    <main>
-        <p>〜生徒一覧〜</p>
-    </main>    
-    <footer>
+<!doctype html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>job-offer</title>
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    </head>
 
+    <body>
+        <header class="header">
+            <h1>
+                <a href="https://sa-i.jp/">Sai Tech</a>
+            </h1>
+            <nav class="pc-nav">
+                <ul>
+                    <li><a href="{{route('register')}}">会員登録</a></li>
+                    <li><a href="{{route('login')}}">企業ログイン</a></li>
+                    <li><a href="{{route('login')}}">生徒ログイン</a></li>
+                    <li><a href="{{route('mypage.index')}}">マイページ</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <div class="Navigation">
+        </div>
+        <div class="content">
+        </div>
 
-
-    </footer>
-</body>
-</html>
-
+        <footer class="footer">
+        </footer>
+    </body>
+<html>
