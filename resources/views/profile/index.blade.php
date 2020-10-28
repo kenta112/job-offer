@@ -26,21 +26,25 @@
             </nav>
         </header>
         <div class="navigation">
-            <p>グローバルナビゲーション</p>
+            <h1>\プログラミングスクールSaiTechの生徒と企業を繋げたい/<h1>
         </div>
 
         <!-- 生徒一覧表記 -->
-        <div class="content">　 
+        <div class="content">
+            <h2>〜 生徒一覧 〜</h2>　 
             <div class="container"> 
-            @foreach ($profiles as $profile)
+                @foreach ($profiles as $profile)
                 <div class="card">
-                    <div class="card__imgframe" src="">写真</div>
+                    <a href=""></a>
+                    <div class="card__imgframe" src=""></div>
                     <div class="card__textbox">
                         <div class="card__titletext">
-                            {{$profile->birthday}}
+                            <h1>{{$profile->user_id}}</h1>
                         </div>
                         <div class="card__overviewtext">
                             {{$profile->language}}
+                            <br>
+                            {{$profile->location}}  
                         </div>
                     </div>
                 </div>
@@ -50,7 +54,6 @@
         <div class ="pagenate">
             <h1>{{ $profiles->links()}}</h1>
         </div>   
-
         <footer class="footer">
             <p>Saitech</p>
         </footer>
