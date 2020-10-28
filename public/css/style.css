@@ -48,23 +48,25 @@ body{
     font-size: 14px;
  }
 
-.Navigation{
-    height: 400px; 
-    text-align: center; 
-    background-color:white;
+ .navigation{
+   height: 400px; 
+   text-align: center; 
+   background-color:white;
 }
-
 .content{
     height:1200px;
     background-color:#cccccc;
     text-align: center;
     margin: 10px 0 10px 0;
-    width:700px;
+    width:100%;
 }
-
 .container {
-   width:300px;
-   margin:0 auto;
+   width:1000px;
+   display: flex;
+   flex-wrap : wrap;
+   margin-right: auto;
+   margin-left : auto;
+   justify-content: space-between;
 }
 .card{
    width: 288px;
