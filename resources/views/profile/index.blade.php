@@ -14,12 +14,12 @@
                 <ul>　                    
         <!-- ユーザーは認証済み -->
                     @auth
-                    <li><a href="{{route('login')}}">企業ログイン</a></li>
-                    <li><a href="{{route('login')}}">生徒ログイン</a></li>
                     <li><a href="{{route('mypage.index')}}">マイページ</a></li>
                     @endauth
         <!-- ユーザーは認証されていない -->
                     @guest
+                    <li><a href="{{route('login')}}">企業ログイン</a></li>
+                    <li><a href="{{route('login')}}">生徒ログイン</a></li>
                 　　<li><a href="{{route('register')}}">会員登録</a></li>
                     @endguest
                 </ul>
@@ -32,19 +32,24 @@
         <!-- 生徒一覧表記 -->
         <div class="content">　 
             <div class="container"> 
+            @foreach ($profiles as $profile)
                 <div class="card">
                     <div class="card__imgframe" src="">写真</div>
                     <div class="card__textbox">
                         <div class="card__titletext">
-                            ホゲホゲホゲほげ
+                            {{$profile->birthday}}
                         </div>
                         <div class="card__overviewtext">
-                            ホゲホゲホゲ
+                            {{$profile->language}}
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
+        <div class ="pagenate">
+            <h1>{{ $profiles->links()}}</h1>
+        </div>   
 
         <footer class="footer">
             <p>Saitech</p>
