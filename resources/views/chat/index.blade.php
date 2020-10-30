@@ -1,0 +1,1 @@
+chat/index.blade.php
