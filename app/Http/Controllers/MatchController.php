@@ -38,16 +38,5 @@ class MatchController extends Controller
         return redirect()->back();
     }
 
-    public function index() {
-        if(user_id === 0)
-        $match = Match::where('user_id', Auth::id())->get();
-        else
-        $match = Match::where('company', Auth::id())->get();
-
-        
-     return view(match.index);
-        
-
-
-    }
+    
 }

@@ -5,14 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ChatRoom;
 use App\ChatMessage;
+use App\ChatRoomUser;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 class ChatController extends Controller
 {
     public function index()
     {
-        // room->idを渡す
+        $user_id = Auth::id();
+        
+        $chat_room_ids = ChatRoomUser::where('user_id',$user_id)->pluck('chat_room_id');
+        
+         $room_ids = ChatRoom::whereIn('id',$chat_room_ids)->pluck('id');
+        $matches = ChatRoomUser::whereIn('chat_room_id',$room_ids)->whereNotIn('user_id',[$user_id])->get();
+        
+        
+   
+        
+     return view('chat.index',compact('matches'));
     }
+        
 
     public function show($id)
     {

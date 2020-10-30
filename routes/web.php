@@ -25,8 +25,6 @@ Route::get('/chat/{chat}', 'ChatController@show')->name('chat.show');
 
 Auth::routes();
 
-Route::get('/', 'ProfileController@index')->name('profile.index');
-Route::get('/{profile}', 'ProfileController@show')->name('profile.show');
 
 Route::get('/match/{match}', 'MatchController@store')->name('match.store');
 
@@ -37,4 +35,6 @@ Route::post('/mypage/store', 'MypageController@store')->name('mypage.store');
 Route::get('/mypage/edit', 'MypageController@edit')->name('mypage.edit');
 Route::post('/mypage/update', 'MypageController@update')->name('mypage.update');
 
-Route::post('/mach', 'MatchController@index')->name('match.index');
+
+Route::get('/', 'ProfileController@index')->name('profile.index');
+Route::get('/{profile}', 'ProfileController@show')->name('profile.show');
