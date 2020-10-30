@@ -48,19 +48,26 @@ body{
     font-size: 14px;
  }
 
-.Navigation{
-    height: 400px; 
-    text-align: center; 
-    background-color:white;
+ .navigation{
+   height: 400px; 
+   text-align: center; 
+   background-color:white;
 }
-
 .content{
     height:1200px;
     background-color:#cccccc;
     text-align: center;
     margin: 10px 0 10px 0;
+    width:100%;
 }
-
+.container {
+   width:1000px;
+   display: flex;
+   flex-wrap : wrap;
+   margin-right: auto;
+   margin-left : auto;
+   justify-content: space-between;
+}
 .card{
    width: 288px;
    height: auto;
@@ -103,5 +110,6 @@ body{
 .footer{
     height: 70px;
     text-align: center;
+    vertical-align: middle;
     background: linear-gradient(146deg, #ffbd00, #ef7122);
 }

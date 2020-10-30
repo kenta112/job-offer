@@ -49,12 +49,13 @@ class MypageController extends Controller
      public function edit() {
          //dd(Auth::id());
         $profile = User::where('id', Auth::id())->profile->get();
-        return view('mypage.create',compact('profile'));
+        return view('mypage.edit',compact('profile'));
      }
      
 
-     public function update(User $user,Request $request)
+     public function update(Request $request)
     {
+        $user = Auth::user();
         $profile = $user->profile->update([
             'employment' => $request->employment,
             'language' => $request->language,
@@ -67,7 +68,9 @@ class MypageController extends Controller
            
            
         ]);
-        return redirect()->back();
+
+        return redirect()->route('mypage.index',$user);
+
     }
 
 

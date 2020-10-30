@@ -18,7 +18,7 @@
 
   <div>
     <lavel for="birthday">生年月日</lavel>
-    <input id="birthday" type="number" value="{{$profile->name}}" name="birthday" placeholder="例）19940602">
+    <input id="birthday" type="number" value="{{$profile->birthday}}" name="birthday" placeholder="例）19940602">
   </div>
 
   <div>
