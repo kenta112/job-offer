@@ -15,6 +15,7 @@
         <!-- ユーザーは認証済み -->
                     @auth
                     <li><a href="{{route('mypage.index')}}">マイページ</a></li>
+                    <li><a href="{{route('chat.index')}}">チャット</a></li>
                     @endauth
         <!-- ユーザーは認証されていない -->
                     @guest
