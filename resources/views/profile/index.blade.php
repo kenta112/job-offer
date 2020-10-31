@@ -11,21 +11,21 @@
             <div class="container"> 
                 @foreach ($profiles as $profile)
                 <a href="{{route('profile.show',$profile->user->id)}}">
-                <div class="card">
-                    <div class="card__imgframe" src=""></div>
-                    <div class="card__textbox">
-                        <div class="card__titletext">
-                            <h1>{{$profile->user->name}}</h1>
-                        </div>
-                        {{$profile->user->id}}
-                        <div class="card__overviewtext">
-                            <br>
-                            {{$profile->birthday}} 
-                            <br>
-                            {{$profile->location}}  
+                    <div class="profiles">
+                        <!-- <div class="card__imgframe" src=""></div> -->
+                    
+                        <img src="{{$profile->icon}}" alt="" class="card__imgframe">
+
+                        <div class="card__textbox">
+                            <div class="card__titletext">
+                                <h1>{{$profile->user->name}}</h1>
+                            </div>
+                            <div class="card__overviewtext">
+                                {{$profile->birthday}} 
+                                {{$profile->location}}  
+                            </div>
                         </div>
                     </div>
-                </div>
                 </a>
                 @endforeach
             </div>
