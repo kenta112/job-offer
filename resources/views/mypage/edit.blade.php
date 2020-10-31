@@ -1,6 +1,6 @@
 プロフィール作成画面
 
-<form action="{{route('mypage.store')}}" method="POST">
+<form action="{{route('mypage.update')}}" method="POST">
   <div>
     <lavel for="employment">雇用形態</lavel>
     <input id="employment" value="{{$profile->employment}}" type="text" name="employment" placeholder="例）フリーランス">

@@ -49,6 +49,7 @@ class MypageController extends Controller
      public function edit() {
          //dd(Auth::id());
         $profile = User::where('id', Auth::id())->profile->get();
+        
         return view('mypage.edit',compact('profile'));
      }
      

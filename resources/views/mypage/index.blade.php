@@ -1,7 +1,7 @@
-mypage
+<h2>MyPage</h2><br>
 
-{{$user->name}}
-{{$user->email}}
+{{$user->name}}<br>
+{{$user->email}}<br>
 
 @if($exist)
 <a href="{{route('mypage.edit')}}">プロフィール更新</a>

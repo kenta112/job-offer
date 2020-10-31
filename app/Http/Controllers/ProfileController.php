@@ -21,7 +21,7 @@ class ProfileController extends Controller
     }
 
     public function show($id) {
-        dd($id);
+       
         $user = User::where('id',$id)->first();
         
         $profile = $user->profile;
