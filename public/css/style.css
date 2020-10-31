@@ -88,8 +88,10 @@ body{
    margin-left : auto;
    justify-content: space-between;
 }
-.card{
-   width: 288px;
+
+.card　{
+   position: relative;
+   width: 1;
    height: 300px;
    border-radius: 8px;
    overflow: hidden;

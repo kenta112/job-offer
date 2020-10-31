@@ -47,8 +47,7 @@ class MypageController extends Controller
 
 
      public function edit() {
-        
-
+         
         $user_id = User::where('id', Auth::id())->pluck('id');
         $profile = Profile::where('user_id',$user_id)->first();
         

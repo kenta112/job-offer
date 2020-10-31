@@ -6,6 +6,7 @@
 
 <form action="{{route('mypage.update')}}" method="POST">
 @csrf
+
   <div>
     <lavel for="employment">雇用形態</lavel>
     <input id="employment" value="{{$profile->employment}}" type="text" name="employment" placeholder="例）フリーランス">

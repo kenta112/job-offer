@@ -2,10 +2,10 @@
 
 @section('content')
 
-mypage
+<h2>MyPage</h2>
 
-{{$user->name}}
-{{$user->email}}
+{{$user->name}}<br>
+{{$user->email}}<br>
 
 @if($user->type === 0) 
 @if($exist)
