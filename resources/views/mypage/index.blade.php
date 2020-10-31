@@ -1,6 +1,6 @@
-<!-- @extends('layouts.layout')
+@extends('layouts.layout')
 
-@section('content') -->
+@section('content')
 
 mypage
 
@@ -15,4 +15,4 @@ mypage
 @endif
 @endif
 
-<!-- @endsection -->
+@endsection
