@@ -35,18 +35,18 @@
             <div class="container"> 
                 @foreach ($profiles as $profile)
                 <div class="card">
-                    <a href=""></a>
                     <div class="card__imgframe" src=""></div>
                     <div class="card__textbox">
                         <div class="card__titletext">
-                            <h1>{{$profile->user_id}}</h1>
+                            <h1>{{$profile->user->name}}</h1>
                         </div>
                         <div class="card__overviewtext">
-                            {{$profile->language}}
+                            <!-- {{$profile->language}} -->
                             <br>
                             {{$profile->location}}  
                         </div>
                     </div>
+                    <a href="{{route('profile.show',$profile->id)}}"></a>
                 </div>
                 @endforeach
             </div>
