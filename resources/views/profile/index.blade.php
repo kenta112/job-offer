@@ -2,7 +2,7 @@
 
 @section('content')
         <div class="navigation">
-            <h1>\プログラミングスクールSaiTechの生徒と企業を繋げたい/<h1>
+            <h2>\プログラミングスクールSaiTechの生徒と企業を繋げたい/<h2>
         </div>
 
         <!-- 生徒一覧表記 -->
@@ -18,7 +18,7 @@
 
                         <div class="card__textbox">
                             <div class="card__titletext">
-                                <h1>{{$profile->user->name}}</h1>
+                                <h3>{{$profile->user->name}}</h3>
                             </div>
                             <div class="card__overviewtext">
                                 {{$profile->birthday}} 
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class ="pagenate">
-            <h1>{{ $profiles->links()}}</h1>
+            <p>{{ $profiles->links()}}</p>
         </div>   
 
 @endsection

@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <h1>
-            <a href="https://sa-i.jp/">Sai Tech</a>
+            <a href="{{route('profile.index')}}">Sai Tech</a>
         </h1>
         <nav class="pc-nav">
             <ul>　                    
