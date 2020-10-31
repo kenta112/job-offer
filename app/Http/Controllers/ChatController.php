@@ -15,21 +15,16 @@ class ChatController extends Controller
     {
         $user_id = Auth::id();
         
-        $chat_room_ids = ChatRoomUser::where('user_id',$user_id)->pluck('chat_room_id');
+        $chat_room_ids = ChatRoomUser::where('user_id', $user_id)->pluck('chat_room_id');
+        $room_ids = ChatRoom::whereIn('id', $chat_room_ids)->pluck('id');
+        $matches = ChatRoomUser::whereIn('chat_room_id', $room_ids)->whereNotIn('user_id',[$user_id])->get();
         
-         $room_ids = ChatRoom::whereIn('id',$chat_room_ids)->pluck('id');
-        $matches = ChatRoomUser::whereIn('chat_room_id',$room_ids)->whereNotIn('user_id',[$user_id])->get();
-        
-        
-   
-        
-     return view('chat.index',compact('matches'));
+        return view('chat.index',compact('matches'));
     }
         
 
     public function show($id)
     {
-        //対象chatMessageの取得
         //room->idに適応するchatmessageを全て取得する
         $messages = ChatRoom::find($id)->chatMessages()->orderBy('created_at', 'desc')->get();
 

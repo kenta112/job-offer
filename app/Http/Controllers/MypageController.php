@@ -11,21 +11,16 @@ class MypageController extends Controller
 {
     public function index() {
         $exist = Profile::where('user_id', Auth::id())->exists();
-
-// dd(Auth::user());
         $user = Auth::user();
-        return view('mypage.index',compact('user','exist')); 
+
+        return view('mypage.index', compact('user', 'exist')); 
     }
 
-
-
     public function create() {
-        // dd($exist);
         return view('mypage.create');
-     }
+    }
      
-
-     public function store(Request $request)
+    public function store(Request $request)
     {
        Profile::create([
            'user_id' => Auth::id(),
@@ -37,27 +32,25 @@ class MypageController extends Controller
             'image' => $request->image,
             'appeal' => $request->appeal,
             'future' => $request->future,
-           
-           
         ]);
+
         $user = Auth::user();
-        return redirect()->route('mypage.index',$user);
-       
+
+        return redirect()->route('mypage.index', $user);  
     }
 
 
-     public function edit() {
-         
-        $user_id = User::where('id', Auth::id())->pluck('id');
-        $profile = Profile::where('user_id',$user_id)->first();
+    public function edit() {
+        $profile = Profile::where('user_id', Auth::id())->first();
         
-        return view('mypage.edit',compact('profile'));
+        return view('mypage.edit', compact('profile'));
     }
     
     
     public function update(Request $request)
     {
         $user = Auth::user();
+
         $profile = $user->profile->update([
             'employment' => $request->employment,
             'language' => $request->language,
@@ -67,15 +60,8 @@ class MypageController extends Controller
             'image' => $request->image,
             'appeal' => $request->appeal,
             'future' => $request->future,
-            
-            
-            ]);
-            
-           
-            return redirect()->route('mypage.index',$user);
-            
-    }
-
-
-    
+        ]);
+             
+        return redirect()->route('mypage.index',$user); 
+    }    
 }
