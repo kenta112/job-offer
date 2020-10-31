@@ -15,7 +15,6 @@
         <!-- ユーザーは認証済み -->
                     @auth
                     <li><a href="{{route('mypage.index')}}">マイページ</a></li>
-                    <li><a href="{{route('chat.index')}}">チャット</a></li>
                     @endauth
         <!-- ユーザーは認証されていない -->
                     @guest
@@ -41,12 +40,15 @@
                         <div class="card__titletext">
                             <h1>{{$profile->user->name}}</h1>
                         </div>
+                        {{$profile->user->id}}
                         <div class="card__overviewtext">
-                            <!-- {{$profile->language}} -->
+                            <br>
+                            {{$profile->birthday}} 
                             <br>
                             {{$profile->location}}  
                         </div>
                     </div>
+                    <a href="{{route('profile.show',$profile->user->id)}}"></a>
                 </div>
                 @endforeach
             </div>
