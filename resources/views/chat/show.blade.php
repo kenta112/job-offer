@@ -1,3 +1,7 @@
+@extends('layouts.layout')
+
+@section('content')
+
 <form action="{{ route('chat.store') }}" method="POST">
     @csrf
     <input type="hidden" name="chat_room_id" value="{{ $id }}">
@@ -9,3 +13,4 @@
     <p>{{ $message->message }}</p>
 @endforeach
 
+@endsection

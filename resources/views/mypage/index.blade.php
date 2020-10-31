@@ -1,3 +1,7 @@
+<!-- @extends('layouts.layout')
+
+@section('content') -->
+
 mypage
 
 {{$user->name}}
@@ -10,3 +14,5 @@ mypage
 <a href="{{route('mypage.create')}}">プロフィール作成</a>
 @endif
 @endif
+
+<!-- @endsection -->

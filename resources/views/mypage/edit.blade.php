@@ -1,3 +1,7 @@
+@extends('layouts.layout')
+
+@section('content')
+
 プロフィール更新画面
 
 <form action="{{route('mypage.update')}}" method="POST">
@@ -47,3 +51,5 @@
   <input type="submit" value="送信">
   </div>
 </form>
+
+@endsection
