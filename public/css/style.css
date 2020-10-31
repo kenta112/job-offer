@@ -157,5 +157,7 @@ body{
 }
 
 .btn-logout {
-   background-color: none;
+   background-color: transparent;
+   border: none;
+   color: #4b4b4b;
 }
