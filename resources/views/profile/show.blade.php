@@ -18,7 +18,7 @@
 <p>将来像：{{ $profile->future }}</p>
 
 @auth
-    @if($user->type == 1)
+    @if($user_type == 1)
         @if($matched)
             <p>すでに応募しています</p>
         @else

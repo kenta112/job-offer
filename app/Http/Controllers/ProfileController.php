@@ -26,8 +26,10 @@ class ProfileController extends Controller
         
         $profile = $user->profile;
 
+        $user_type = Auth::user()->type;
+
         $matched = Match::where('user_id', $user->id)->where('company', Auth::id())->exists();
 
-        return view('profile.show', compact('profile', 'user', 'matched'));
+        return view('profile.show', compact('profile', 'user', 'matched', 'user_type'));
     }
 }
