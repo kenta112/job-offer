@@ -17,13 +17,15 @@
 <p>アピールポイント：{{ $profile->appeal }}</p>
 <p>将来像：{{ $profile->future }}</p>
 
-@if($user->type == 1)
-    @if($matched)
-        <p>すでに応募しています</p>
-    @else
-        <a href="{{ route('match.store', $user->id) }}">応募する</a>
+@auth
+    @if($user->type == 1)
+        @if($matched)
+            <p>すでに応募しています</p>
+        @else
+            <a href="{{ route('match.store', $user->id) }}">応募する</a>
+        @endif
     @endif
-@endif
+@endauth
 
 @endsection
 
