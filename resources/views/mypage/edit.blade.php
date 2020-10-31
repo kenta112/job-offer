@@ -1,6 +1,7 @@
-プロフィール作成画面
+プロフィール更新画面
 
-<form action="{{route('mypage.store')}}" method="POST">
+<form action="{{route('mypage.update')}}" method="POST">
+@csrf
   <div>
     <lavel for="employment">雇用形態</lavel>
     <input id="employment" value="{{$profile->employment}}" type="text" name="employment" placeholder="例）フリーランス">
@@ -23,23 +24,23 @@
 
   <div>
     <lavel for="icon">アイコン</lavel>
-    <input id="icon" type="text" name="icon" >
+    <input id="icon" type="text" value="{{$profile->icon}}" name="icon" >
   </div>
 
   <div>
     <lavel for="image">イメージ画像</lavel>
-    <input id="image" type="text" name="image" >
+    <input id="image" value="{{$profile->image}}" type="text" name="image" >
   </div>
 
 
   <div>
     <lavel for="appeal">アピールポイント</lavel>
-    <textarea id="appeal" name="appeal" ></textarea>
+    <textarea id="appeal" name="appeal" >{{$profile->appeal}}</textarea>
   </div>
 
   <div>
     <lavel for="future">将来像</lavel>
-    <textarea id="future" name="future" ></textarea>
+    <textarea id="future" name="future" >{{$profile->future}}</textarea>
   </div>
 
   <div>

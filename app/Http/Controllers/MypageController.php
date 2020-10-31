@@ -47,30 +47,34 @@ class MypageController extends Controller
 
 
      public function edit() {
-         //dd(Auth::id());
-        $profile = User::where('id', Auth::id())->profile->get();
-        return view('mypage.edit',compact('profile'));
-     }
-     
+        
 
-     public function update(Request $request)
+        $user_id = User::where('id', Auth::id())->pluck('id');
+        $profile = Profile::where('user_id',$user_id)->first();
+        
+        return view('mypage.edit',compact('profile'));
+    }
+    
+    
+    public function update(Request $request)
     {
         $user = Auth::user();
         $profile = $user->profile->update([
             'employment' => $request->employment,
             'language' => $request->language,
-            'location' => $request->createlocation,
-            'barthday' => $request->barthday,
+            'location' => $request->location,
+            'birthday' => $request->birthday,
             'icon' => $request->icon,
             'image' => $request->image,
             'appeal' => $request->appeal,
             'future' => $request->future,
+            
+            
+            ]);
+            
            
-           
-        ]);
-
-        return redirect()->route('mypage.index',$user);
-
+            return redirect()->route('mypage.index',$user);
+            
     }
 
 
