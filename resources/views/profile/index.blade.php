@@ -22,7 +22,7 @@
                     <li><a href="{{route('login')}}">生徒ログイン</a></li>
                 　　<li><a href="{{route('register')}}">会員登録</a></li>
                     @endguest
-                </ul>
+                </ul>、
             </nav>
         </header>
         <div class="navigation">
@@ -34,6 +34,7 @@
             <h2>〜 生徒一覧 〜</h2>　 
             <div class="container"> 
                 @foreach ($profiles as $profile)
+                <a href="{{route('profile.show',$profile->user->id)}}">
                 <div class="card">
                     <div class="card__imgframe" src=""></div>
                     <div class="card__textbox">
@@ -48,8 +49,8 @@
                             {{$profile->location}}  
                         </div>
                     </div>
-                    <a href="{{route('profile.show',$profile->user->id)}}"></a>
                 </div>
+                </a>
                 @endforeach
             </div>
         </div>
