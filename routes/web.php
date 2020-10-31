@@ -19,12 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/', 'ProfileController@index')->name('profile.index');
+Route::get('/profile/{profile}', 'ProfileController@show')->name('profile.show');
+
 Route::get('/chat', 'ChatController@index')->name('chat.index');
 Route::post('/chat', 'ChatController@store')->name('chat.store');
 Route::get('/chat/{chat}', 'ChatController@show')->name('chat.show');
-
-Auth::routes();
-
 
 Route::get('/match/{match}', 'MatchController@store')->name('match.store');
 
@@ -36,5 +36,3 @@ Route::get('/mypage/edit', 'MypageController@edit')->name('mypage.edit');
 Route::post('/mypage/update', 'MypageController@update')->name('mypage.update');
 
 
-Route::get('/', 'ProfileController@index')->name('profile.index');
-Route::get('/{profile}', 'ProfileController@show')->name('profile.show');

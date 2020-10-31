@@ -155,3 +155,7 @@ body{
     vertical-align: middle;
     background: linear-gradient(146deg, #ffbd00, #ef7122);
 }
+
+.btn-logout {
+   background-color: none;
+}

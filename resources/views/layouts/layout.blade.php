@@ -22,7 +22,12 @@
                 @auth
                 <li><a href="{{route('mypage.index')}}">マイページ</a></li>
                 <li><a href="{{route('chat.index')}}">チャット</a></li>
-                <li><a href="{{route('logout')}}">ログアウト</a></li>
+                <li>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <input class="btn-logout" type="submit" value="ログアウト">
+                    </form>
+                </li>
                 @endauth
     <!-- ユーザーは認証されていない -->
                 @guest
