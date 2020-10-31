@@ -21,7 +21,8 @@ class ProfileController extends Controller
     }
 
     public function show($id) {
-        $user = User::find($id);
+        $user = User::find($id)->first();
+        
         $profile = $user->profile;
 
         $matched = Match::where('user_id', $user->id)->where('company', Auth::id())->exists();
