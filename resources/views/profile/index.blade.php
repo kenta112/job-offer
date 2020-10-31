@@ -1,30 +1,6 @@
-<!doctype html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>job-offer</title>
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    </head>
+@extends('layouts.layout')
 
-    <body>
-        <header class="header">
-            <h1>
-                <a href="https://sa-i.jp/">Sai Tech</a>
-            </h1>
-            <nav class="pc-nav">
-                <ul>　                    
-        <!-- ユーザーは認証済み -->
-                    @auth
-                    <li><a href="{{route('mypage.index')}}">マイページ</a></li>
-                    @endauth
-        <!-- ユーザーは認証されていない -->
-                    @guest
-                    <li><a href="{{route('login')}}">企業ログイン</a></li>
-                    <li><a href="{{route('login')}}">生徒ログイン</a></li>
-                　　<li><a href="{{route('register')}}">会員登録</a></li>
-                    @endguest
-                </ul>
-            </nav>
-        </header>
+@section('content')
         <div class="navigation">
             <h1>\プログラミングスクールSaiTechの生徒と企業を繋げたい/<h1>
         </div>
@@ -56,8 +32,5 @@
         <div class ="pagenate">
             <h1>{{ $profiles->links()}}</h1>
         </div>   
-        <footer class="footer">
-            <p>Saitech</p>
-        </footer>
-        </body>
-<html> 
+
+@endsection
