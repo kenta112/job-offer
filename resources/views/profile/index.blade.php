@@ -46,7 +46,6 @@
                             {{$profile->location}}  
                         </div>
                     </div>
-                    <a href="{{route('profile.show',$profile->id)}}"></a>
                 </div>
                 @endforeach
             </div>
