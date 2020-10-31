@@ -9,7 +9,6 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css?<?php echo date("Ymd-His"); ?>" media=" screen">
-    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 </head>
 <body>
     <header class="header">
