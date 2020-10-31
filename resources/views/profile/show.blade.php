@@ -1,3 +1,7 @@
+@extends('layouts.layout')
+
+@section('content')
+
 <img src="{{ $profile->icon }}" alt="">
 
 <h3>氏名：{{ $user->name }}さん</h3>
@@ -20,5 +24,7 @@
         <a href="{{ route('match.store', $user->id) }}">応募する</a>
     @endif
 @endif
+
+@endsection
 
 

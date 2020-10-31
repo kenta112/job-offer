@@ -1,9 +1,5 @@
-<!doctype html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>job-offer</title>
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    </head>
+@extends('layouts.layout')
+
 
     <body>
         <header class="header">
@@ -25,6 +21,7 @@
                 </ul>、
             </nav>
         </header>
+@section('content')
         <div class="navigation">
             <h1>\プログラミングスクールSaiTechの生徒と企業を繋げたい/<h1>
         </div>
@@ -57,8 +54,5 @@
         <div class ="pagenate">
             <h1>{{ $profiles->links()}}</h1>
         </div>   
-        <footer class="footer">
-            <p>Saitech</p>
-        </footer>
-        </body>
-<html> 
+
+@endsection
